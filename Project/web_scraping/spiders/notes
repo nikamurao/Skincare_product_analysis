@@ -1,0 +1,114 @@
+#Close pop-ups
+
+'category': detail.xpath(".//a[@data-at='pdp_bread_crumb'])[3]/text()"/get(),
+'likes': detail.xpath(".//span[@class='css-jk94q9']/text()").get(),
+'img_link': detail.xpath("(.//img[@class='css-1rovmyu eanm77i0'])/@href").get(),
+'price': detail.xpath(".//b[@class='css-0']/text()").get(),
+'size': detail.xpath(".//span[@class='css-15ro776']/text()").get(),
+
+'highlights': 
+//div[@class='css-h1wajg eanm77i0']
+    //div/img/text()
+
+'about the product': ((//div[@class='css-5k081f eanm77i0']//div)[2]/div)[1]/div
+
+scroll down
+click + on ingredients
+    //button[@data-at='ingredients']
+    .click
+
+#how can i get histogram of ratings and reviews
+
+
+'stars': detail.xpath("//span[@class='css-1ac1x0l eanm77i0']/text()").get()
+'reviews': detail.xpath("//span[@class='css-nv7myq eanm77i0']/text()").get()
+'full ingredients set': detail.xpath("(//div[@class='css-1ue8dmw eanm77i0'])[1]/div/text()").get()
+
+Scrape the reviews
+#should i do a separate spider? 
+
+Select reviews - //div[@class='css-hehhcj eanm77i0']
+
+'about the reviewer': reviewer.xpath("//span[@class='css-2h4ti5 eanm77i0']/text()").get(),
+'review title': (//h3[@class='css-m9drnf eanm77i0']/text()").get()
+
+recommended - not working? //div[@class='css-12com3g eanm77i0']//svg
+'review content': (//div[@class='css-x1yqyp eanm77i0']/text()").get(),
+'verified': ("//span[@data-at='verified_purchase_badge']/text()").get(),
+
+
+next_btn= ("//button[@aria-label='Next']")
+
+
+
+browser = webdriver.Chrome()
+urls = [
+    'https://www.hubzu.com/property/0007190806526-3925-E-Landis-Ave-Vineland-NJ-08361',
+    'https://www.hubzu.com/property/0007192328826-100-Melissa-Ln-Headland-AL-36345'
+]
+while True:
+    browser.get(('https://www.hubzu.com/property/9007091467618-3632-Stokes-Drive-Sarasota-FL-34232'))# Live Auction Bid URL
+    time.sleep(2)
+
+       #Close pop-up window/s
+        # try:
+        #     close=driver.find_element_by_xpath("//button[@aria-label='Continue shopping']") 
+        #     close.click()
+        #     sleep(3)
+        # except:
+        #     pass
+        # try:
+        #     login=driver.find_element_by_xpath("//div[@role='dialog']/button")
+        #     login.click()
+        #     sleep(3)
+        # except:
+        #     pass
+
+        # #Creating a scroll-down function to see items in the page
+        # # HOW CAN WE USE THIS AS A UNIVERSAL FUNCTION?
+        # def scrollDown(driver, scrolls):
+        #     body = driver.find_element_by_tag_name("body")
+        #     while scrolls >=0:
+        #         body.send_keys(Keys.PAGE_DOWN)
+        #         scrolls -= 1
+        #     return driver
+    
+        # browser= scrollDown(driver, 10)
+
+        # #Expand ingredients tab 
+        # expand_btn=driver.find_element_by_xpath("//button[@data-at='ingredients']")
+        # expand_btn.click()
+        # sleep(2)
+
+        # driver.save_screenshot("expanded button.png")
+
+        # #Extract details 
+        # brand=response.xpath("").get()
+        # name=response.xpath("").get()
+        # weblink=driver.current_url
+        # category=response.xpath(".//a[@data-at='pdp_bread_crumb'])[3]/text()").get()
+        # likes=response.xpath(".//span[@class='css-jk94q9']/text()").get()
+        # img_link= response.xpath("(.//img[@class='css-1rovmyu eanm77i0'])/@href").get()
+        # price=response.xpath(".//b[@class='css-0']/text()").get()
+        # size=response.xpath(".//span[@class='css-15ro776']/text()").get()
+        # full_ingredients=response.xpath("(//div[@class='css-1ue8dmw eanm77i0'])[1]/div/text()").get()
+        # #should grab a list 
+        # highlights=response.xpath("//div[@class='css-h1wajg eanm77i0']").get_all() 
+        # stars=response.xpath("//span[@class='css-1ac1x0l eanm77i0']/text()").get()
+        # num_reviews=detail.xpath("//span[@class='css-nv7myq eanm77i0']/text()").get()
+        # #include about the product, reviews 
+
+        # #Store in dictionary
+        # product_info = {
+        #     'brand' : brand,
+        #     'name' : name,
+        #     'weblink': weblink,
+        #     'sub_category': category,
+        #     'main_category': 'cleansers',
+        #     'num_likes': likes,
+        #     'img_link': img_link,
+        #     'price': price,
+        #     'size': size,
+        #     'ingredients': full_ingredients,
+        #     'rating': stars,
+        #     'num_reviews': num_reviews}
