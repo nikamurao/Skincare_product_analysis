@@ -50,7 +50,7 @@ An important consideration for the project was to use price per volume instead o
 
 ## III. Exploratory data analysis (EDA)
 Some initial EDA has revealed that certain features could be more predictive of price. As shown below, price tends to vary with the product category. Eye creams are typically expensive whilst toners and cleansers are consistently cheap. 
-![image](https://user-images.githubusercontent.com/70846659/127437288-2671b0cc-e501-45c2-afd9-3d28fc280ebd.png)
+![image](![image](https://user-images.githubusercontent.com/70846659/127484783-33078b43-b4ec-410f-ac94-0d2277c11e56.png))
 
 It was also found liquid and lotion formulas tend to be cheaper than serums and oils on average. 
 Vegan products, contrary to my initial hypothesis, do not necessarily cost more than non-vegan products. In fact, the average price for products marked as vegan are slightly lower. 
@@ -66,31 +66,43 @@ As many models work with only numerical data, categorical features like brand, p
 A high-level summary of the feature set is presented below: 
 ![image](https://user-images.githubusercontent.com/70846659/127437029-7772584d-d829-4b0c-93b0-11310ddce07b.png)
 
+The dataset was split 70/30 between training and test before modelling.
 
 ## V. Modelling
 ***A. Classification of Product Affordability***
-After splitting the dataset into a training (70%) and test set (30%), I used various machine learning techniques including logistic regression, support vector machines (SVM), decision tree classifier, Random Forest, XGBoost and Gradient Boosting, to train the data.
+
+Various machine learning techniques were explored in the project, including logistic regression, support vector machines (SVM)After , decision tree classifier, Random Forest, XGBoost and Gradient Boosting.
 
 For each of the techniques, the methodology was as follows: 
 1) Trained the base model (using default parameters)
 2) Tune the parameters to check for performance improvement (used nested cross-validation) 
 3) Derive insights to understand how it is predicting affordability and what features are important 
-- I experimented by using some ML techniques (SVM, logistic regression, Random Forest) as a feature selection method, creating a smaller feature set and testing how various models perform using only the selected features. For example, (include some insights here). This can be helpful for xxxx
+- I have experimented using machine learning techniques (SVM, logistic regression, Random Forest, PCA) for feature selection. This proved effective as generally the model performance has either been maintained or improved while using a smaller dataset (i.e. 108/175 features using SVM for feature selection and 125/175 features using logistic regression). 
 
 The initial project did not consider the ingredients as a feature for the model. However, upon some deliberation, I have decided to explore and extend the project to see if the use of certain ingredients could be more predictive of pricing or whether this will only introduce noise to the model. The model results for the main and extended project will be presented. 
 
 **Model performance**
 
-Cross validated performance, based on accuracy, precision, recall and f1 score, was compared across the models. Majority of the model accuracy is at (XXX). Complementing the analysis with the confusion matrix also revealed the type of errors the models were making. Not surprisingly, the biggest challenge across models was differentiating the average from the cheap or the expensive. 
+Cross validated performance, based on accuracy, precision, recall and f1 score, was compared across the models. Generally, the model accuracy has ranged between betewen 70-80%. The best model performance was: 
 
-Best model performance: 
-*Without ingredients*: Support vector machine (linear kernel) achieved a XXXX. 
-*With ingredients*: XGBoost with an uplift of 2% in accuracy, which confirms the initial hypothesis that the use of certain ingredients 
+*Without ingredients*: Support vector machine (SVM) using a linear kernel trained on 108 features only 
+- Accuracy score on test: 74.1%
+- Average ROC AUC score: 80.8% (cheap - 83.9%, expensive - 84.4%, average - 74.1%)
+- F1 score: 0.74
+
+*With ingredients*: XGBoost trained on the full feature set 
+- Accuracy score on test: 76.1% 
+- Average ROC AUC score: 82.3% (cheap - 86.1%, expensive - 85.0%, average - 75.7%)
+- F1 score: 0.76
+
+With an uplift of 2% in accuracy, which confirms the initial hypothesis that the use of certain ingredients 
+
+*(Naive classifier / baseline model accuracy: 35%)*
+
+The confusion matrix reveals that not surprisingly, the biggest challenge across models was differentiating the average from the cheap or the expensive. 
 
 ***B. Comparing product ingredients***
-
-
-
+To compare product ingredients, pairwise similarity using cosine and jaccard score. 
 
 ## VI. Predictions of the model / Output
 *What insights can we gain from the model?*
