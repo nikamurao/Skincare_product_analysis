@@ -57,6 +57,7 @@ Vegan products, contrary to my initial hypothesis, do not necessarily cost more 
 
 ![image](https://user-images.githubusercontent.com/70846659/127437291-9d7cd732-8440-450c-98df-f08485759a7a.png) ![image](https://user-images.githubusercontent.com/70846659/127437302-634b373d-f06f-48c2-a5ac-7a669f03f5f6.png)
 
+(add insights from the ingredients file)
 (More details on EDA findings here)
 
 ## IV. Data preparation for training 
@@ -67,6 +68,7 @@ A high-level summary of the feature set is presented below:
 
 
 ## V. Modelling
+***A. Classification of Product Affordability***
 After splitting the dataset into a training (70%) and test set (30%), I used various machine learning techniques including logistic regression, support vector machines (SVM), decision tree classifier, Random Forest, XGBoost and Gradient Boosting, to train the data.
 
 For each of the techniques, the methodology was as follows: 
@@ -85,10 +87,17 @@ Best model performance:
 *Without ingredients*: Support vector machine (linear kernel) achieved a XXXX. 
 *With ingredients*: XGBoost with an uplift of 2% in accuracy, which confirms the initial hypothesis that the use of certain ingredients 
 
+***B. Comparing product ingredients***
+
+
+
+
 ## VI. Predictions of the model / Output
 *What insights can we gain from the model?*
 
 SHAP was used to illustrate how the final model (XGBoost) were creating 
+
+
 
 
 ## VII. Deployment
