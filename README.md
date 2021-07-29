@@ -69,8 +69,6 @@ A high-level summary of the feature set is presented below:
 The dataset was split 70/30 between training and test before modelling.
 
 ## V. Modelling
-***A. Classification of Product Affordability***
-
 Various machine learning techniques were explored in the project, including logistic regression, support vector machines (SVM)After , decision tree classifier, Random Forest, XGBoost and Gradient Boosting.
 
 For each of the techniques, the methodology was as follows: 
@@ -83,7 +81,11 @@ The initial project did not consider the ingredients as a feature for the model.
 
 **Model performance**
 
-Cross validated performance, based on accuracy, precision, recall and f1 score, was compared across the models. Generally, the model accuracy has ranged between betewen 70-80%. The best model performance was: 
+Cross validated performance, based on accuracy, precision, recall and f1 score, was compared across the models. Generally, the model accuracy has ranged between betewen 70-80%. 
+
+![image](https://user-images.githubusercontent.com/70846659/127489134-48b72b3c-fb52-4b95-aa7f-31a341909eff.png)
+
+The pre-selected models were then evaluated on the test set. The results are: 
 
 *Without ingredients*: Support vector machine (SVM) using a linear kernel trained on 108 features only 
 - Accuracy score on test: 74.1%
@@ -94,27 +96,24 @@ Cross validated performance, based on accuracy, precision, recall and f1 score, 
 - Accuracy score on test: 76.1% 
 - Average ROC AUC score: 82.3% (cheap - 86.1%, expensive - 85.0%, average - 75.7%)
 - F1 score: 0.76
-
-With an uplift of 2% in accuracy, which confirms the initial hypothesis that the use of certain ingredients 
-
+- 
 *(Naive classifier / baseline model accuracy: 35%)*
 
-The confusion matrix reveals that not surprisingly, the biggest challenge across models was differentiating the average from the cheap or the expensive. 
-
-***B. Comparing product ingredients***
-To compare product ingredients, pairwise similarity using cosine and jaccard score. 
+The confusion matrix reveals that not surprisingly, the model has better predictive power for the cheap and expensive categories, compared to the average.  
 
 ## VI. Predictions of the model / Output
 *What insights can we gain from the model?*
 
-SHAP was used to illustrate how the final model (XGBoost) were creating 
+SHAP was used to illustrate how the final model (XGBoost) was making the predictions. Here are the SHAP values for the various features: 
 
 ![image](https://user-images.githubusercontent.com/70846659/127482841-c5508acb-efc7-4743-8293-345bd7a8aed4.png)
 
+It can also be used to explain an individual observation. For example: 
+![image](https://user-images.githubusercontent.com/70846659/127490050-cbe6a551-b8c6-43f0-9bdd-f73379c872d3.png)
 
 
 ## VII. Deployment
-The model was retained on the entire dataset and is deployed through Streamlit.
+The model was retained on the entire dataset and is currently being deployed through Streamlit.
 
 The link will be included soon but in the meantime, here is a preview of what you can do with the model:
 1) Analyse how a product has been priced and the prediction of its category according to our model
