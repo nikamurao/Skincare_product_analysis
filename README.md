@@ -97,20 +97,25 @@ Best model performance:
 
 SHAP was used to illustrate how the final model (XGBoost) were creating 
 
+![image](https://user-images.githubusercontent.com/70846659/127482841-c5508acb-efc7-4743-8293-345bd7a8aed4.png)
 
 
 
 ## VII. Deployment
-Streamlit application - upcoming. in the meantime, here are some snapshots of how it is working: 
+The model was retained on the entire dataset and is deployed through Streamlit.
 
-
+The link will be included soon but in the meantime, here is a preview of what you can do with the model:
+1) Analyse how a product has been priced and the prediction of its category according to our model
+2) Return the most similar products based on ingredients
+3) Compare products based on ingredients 
 
 ## VII. Future Improvements 
 
 
-To use the model, click here. 
-More details about the methodology can also be found here and here. 
 
+___________________________________________________________
+
+More details about the methodology can also be found here and here. 
 Feel free to connect with me through LinkedIn [x] or through email [x]. 
 
 
