@@ -1,4 +1,4 @@
-# Decoding the pricing of your skincare product
+# Decode the pricing of your skincare product with ML
 
 <img src="https://user-images.githubusercontent.com/70846659/127411930-6e253e9d-8168-4fab-a4e3-881522caf583.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="600" height="400" />
 
