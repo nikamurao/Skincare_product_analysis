@@ -118,4 +118,4 @@ The model was retained on the entire dataset and is currently being deployed thr
 
 ________________________________________________________________________
 
-Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/nikki-amurao/) or through [email](amurao.frances@gmail.com).
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/nikki-amurao/) or email (amurao.frances@gmail.com).
