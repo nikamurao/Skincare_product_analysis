@@ -48,7 +48,7 @@ The ingredients also required some simplification as there were variations for t
 
 An important consideration for the project was to use price per volume instead of price alone as price is expected to vary directly with the amount of the product. Referring back to the original problem, the objective is to learn insights about what differentiates a premium from a cheap or an average product. Hence, predicting the exact price of the product is not as important as determining its market positioning so the approach I've taken was to treat this as a classification rather than a price prediction problem. The target variable (price affordability - cheap, average, expensive) was derived by obtaining the dollar price by the size (used oz) and creating the cheap, average and expensive categories by getting the terciles of the price per volume distribution.
 
-## III. Exploratory data analysis (EDA)
+## IV. Exploratory data analysis (EDA)
 Some initial EDA has revealed that certain features could be more predictive of price. As shown below, price tends to vary with the product category. Eye creams are typically expensive whilst toners and cleansers are consistently cheaper. 
 ![image]((https://user-images.githubusercontent.com/70846659/127484783-33078b43-b4ec-410f-ac94-0d2277c11e56.png)
 
@@ -59,7 +59,7 @@ Vegan products, contrary to the initial hypothesis, do not necessarily cost more
 
 *(more details on EDA findings here)*
 
-## IV. Data preparation for training 
+## V. Data preparation for training 
 As many models work with only numerical data, categorical features like brand, product type and skin concerns were one-hot encoded. Feature scaling was also performed for a few features (such as number of likes and number of reviews) to prevent distance-based ML techniques from becoming biased towards the larger scale of the features.
 
 A high-level summary of the feature set is presented below: 
@@ -67,7 +67,7 @@ A high-level summary of the feature set is presented below:
 
 The dataset was split 70/30 between training and test sets before modelling.
 
-## V. Modelling
+## VI. Modelling
 Various machine learning techniques were explored in the project, including Logistic Regression, Support Vector Machines (SVM), Decision Trees, Random Forest, XGBoost and Gradient Boosting.
 
 For each of the techniques, the methodology was as follows: 
@@ -100,7 +100,7 @@ The pre-selected models were then evaluated on the test set. The results are:
 
 The confusion matrix reveals that not surprisingly, the model has better predictive power for the cheap and expensive categories, compared to the average.  
 
-## VI. Findings and conclusion
+## VII. Findings and conclusion
 *What insights can we gain from the model?*
 
 SHAP was used to illustrate how the final model (XGBoost) was making the predictions. Here are the SHAP values for the various features: 
@@ -110,7 +110,7 @@ SHAP was used to illustrate how the final model (XGBoost) was making the predict
 - - This confirmed some initial hypothesis (i.e. brands are able to charge more for targeting certain skincare concerns and offering better formulation types like serums) and also disproved others (i.e. there is a premium paid for award-winning products, ‘clean’, cruelty-free or vegan products)
 - The brand of the product is relatively less important for pricing (vs. other features) with certain exceptions (i.e. The Ordinary, Inkeylist, Dr. Barbara Sturm)
 
-## VII. Deployment
+## VIII. Deployment
 The model was retained on the entire dataset and is currently being deployed through Streamlit (link to be shared soon!). This will allow you to: 
 1) Predict the affordability of a product and analyse what factors led the model to make this prediction 
 2) Discover the most similar products based on ingredients
@@ -118,4 +118,4 @@ The model was retained on the entire dataset and is currently being deployed thr
 
 ________________________________________________________________________
 
-Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/nikki-amurao/) or through [email](mailto: amurao.frances@gmail.com). 
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/nikki-amurao/) or through [email](amurao.frances@gmail.com).
