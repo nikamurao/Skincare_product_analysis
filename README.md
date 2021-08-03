@@ -118,9 +118,11 @@ SHAP was used to illustrate how the final model (XGBoost) was making the predict
 #![image](https://user-images.githubusercontent.com/70846659/127490050-cbe6a551-b8c6-43f0-9bdd-f73379c872d3.png)
 
 ## VII. Deployment
-The model was retained on the entire dataset and is currently being deployed through Streamlit (link to be shared soon!). This will allow users to interact with the model by allowing them to: 
+The model was retained on the entire dataset and is currently being deployed through Streamlit (link to be shared soon!). This will allow you to: 
 1) Predict the affordability of a product and analyse what factors led the model to make this prediction 
 2) Discover the most similar products based on ingredients
 3) Compare two products based on formulation similarity
+
+________________________________________________________________________
 
 Feel free to connect with me through LinkedIn [x] or through email [x]. 
