@@ -50,14 +50,12 @@ An important consideration for the project was to use price per volume instead o
 
 ## III. Exploratory data analysis (EDA)
 Some initial EDA has revealed that certain features could be more predictive of price. As shown below, price tends to vary with the product category. Eye creams are typically expensive whilst toners and cleansers are consistently cheaper. 
-![image](![image](https://user-images.githubusercontent.com/70846659/127484783-33078b43-b4ec-410f-ac94-0d2277c11e56.png))
+![image]((https://user-images.githubusercontent.com/70846659/127484783-33078b43-b4ec-410f-ac94-0d2277c11e56.png)
 
 It was also found liquid and lotion formulas tend to be cheaper than serums and oils on average. 
 Vegan products, contrary to the initial hypothesis, do not necessarily cost more than non-vegan products. In fact, the average price for products marked as vegan are slightly lower. 
 
 ![image](https://user-images.githubusercontent.com/70846659/127437291-9d7cd732-8440-450c-98df-f08485759a7a.png) ![image](https://user-images.githubusercontent.com/70846659/127437302-634b373d-f06f-48c2-a5ac-7a669f03f5f6.png)
-
-(add insights from the ingredients file)
 
 *(more details on EDA findings here)*
 
@@ -112,9 +110,6 @@ SHAP was used to illustrate how the final model (XGBoost) was making the predict
 - - This confirmed some initial hypothesis (i.e. brands are able to charge more for targeting certain skincare concerns and offering better formulation types like serums) and also disproved others (i.e. there is a premium paid for award-winning products, ‘clean’, cruelty-free or vegan products)
 - The brand of the product is relatively less important for pricing (vs. other features) with certain exceptions (i.e. The Ordinary, Inkeylist, Dr. Barbara Sturm)
 
-#SHAP can also be used to explain an individual observation. For example: 
-#![image](https://user-images.githubusercontent.com/70846659/127490050-cbe6a551-b8c6-43f0-9bdd-f73379c872d3.png)
-
 ## VII. Deployment
 The model was retained on the entire dataset and is currently being deployed through Streamlit (link to be shared soon!). This will allow you to: 
 1) Predict the affordability of a product and analyse what factors led the model to make this prediction 
@@ -123,4 +118,4 @@ The model was retained on the entire dataset and is currently being deployed thr
 
 ________________________________________________________________________
 
-Feel free to connect with me through LinkedIn [x] or through email [x]. 
+Feel free to connect with me through [LinkedIn](https://www.linkedin.com/in/nikki-amurao/) or through [email](mailto: amurao.frances@gmail.com). 
