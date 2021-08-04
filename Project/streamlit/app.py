@@ -30,7 +30,7 @@ def fetch_data(path):
     df = pd.read_json(path)
     return df
 
-prod_ingr_matrix1 = fetch_data(os.path.abspath('Project/data/processed_data/product_ingr_inventory.json'))
+prod_ingr_matrix1 = fetch_data('Project/data/processed_data/product_ingr_inventory.json')
 dot_prod= fetch_data('../data/processed_data/common_ingr.json')
 sim_df= fetch_data('../data/processed_data/cos_sim.json')
 df_new = fetch_data('../data/processed_data/combined_data.json')
