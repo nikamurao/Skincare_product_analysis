@@ -13,7 +13,7 @@ import os
 
 #Setting the page configuration
 square_icon = Image.open(os.path.abspath('skincare_square.jpeg'))
-long_icon = Image.open("images/top_banner.png") #rivate-label-skincare
+long_icon = Image.open(os.path.abspath('Project/streamlit/images/top_banner.png')) 
 long_bw = Image.open("images/bw_long.jpeg")
 square_logo = Image.open("images/teen_beauty.png")
 logo = Image.open("images/logo_trans.png")
