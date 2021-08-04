@@ -1,7 +1,6 @@
-numpy==1.19.1
-shap==0.39.0
-xgboost==1.4.2
 pandas==1.2.5
+shap==0.39.0
+numpy==1.19.1
+xgboost==1.4.2
 matplotlib==3.4.2
 Pillow==8.3.1
-streamlit==0.75.0
