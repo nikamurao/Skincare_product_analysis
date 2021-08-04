@@ -14,10 +14,10 @@ import os
 #Setting the page configuration
 square_icon = Image.open(os.path.abspath('Project/streamlit/images/skincare_square.jpeg'))
 long_icon = Image.open(os.path.abspath('Project/streamlit/images/top_banner.png')) 
-long_bw = Image.open("Project/streamlit/images/bw_long.jpeg")
-square_logo = Image.open("Project/streamlit/images//teen_beauty.png")
-logo = Image.open("Project/streamlit/images//logo_trans.png")
-end_icon = Image.open("Project/streamlit/images//lower_banner.png")
+long_bw = Image.open(os.path.abspath("Project/streamlit/images/bw_long.jpeg"))
+square_logo = Image.open(os.path.abspath("Project/streamlit/images//teen_beauty.png"))
+logo = Image.open(os.path.abspath("Project/streamlit/images//logo_trans.png"))
+end_icon = Image.open(os.path.abspath("Project/streamlit/images//lower_banner.png"))
 st.set_page_config(
     page_title="Product and Ingredient Analysis",
     page_icon=square_logo,
@@ -30,7 +30,7 @@ def fetch_data(path):
     df = pd.read_json(path)
     return df
 
-prod_ingr_matrix1 = fetch_data('../data/processed_data/product_ingr_inventory.json')
+prod_ingr_matrix1 = fetch_data(os.path.abspath('Project/data/processed_data/product_ingr_inventory.json'))
 dot_prod= fetch_data('../data/processed_data/common_ingr.json')
 sim_df= fetch_data('../data/processed_data/cos_sim.json')
 df_new = fetch_data('../data/processed_data/combined_data.json')
