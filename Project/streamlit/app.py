@@ -12,12 +12,12 @@ from matplotlib.colors import LinearSegmentedColormap
 import os
 
 #Setting the page configuration
-square_icon = Image.open(os.path.abspath('skincare_square.jpeg'))
+square_icon = Image.open(os.path.abspath('Project/streamlit/images/skincare_square.jpeg'))
 long_icon = Image.open(os.path.abspath('Project/streamlit/images/top_banner.png')) 
-long_bw = Image.open("images/bw_long.jpeg")
-square_logo = Image.open("images/teen_beauty.png")
-logo = Image.open("images/logo_trans.png")
-end_icon = Image.open("images/lower_banner.png")
+long_bw = Image.open("Project/streamlit/images/bw_long.jpeg")
+square_logo = Image.open("Project/streamlit/images//teen_beauty.png")
+logo = Image.open("Project/streamlit/images//logo_trans.png")
+end_icon = Image.open("Project/streamlit/images//lower_banner.png")
 st.set_page_config(
     page_title="Product and Ingredient Analysis",
     page_icon=square_logo,
