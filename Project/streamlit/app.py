@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
  
 #Setting the page configuration
-square_icon = Image.open("images/skincare_square.jpeg")
+square_icon = Image.open(r'/Users/nikamurao/Dropbox (My New Team)/Springboard/C2-Skincare/Project/documentation/images/skincare_square.jpeg')
 long_icon = Image.open("images/top_banner.png") #rivate-label-skincare
 long_bw = Image.open("images/bw_long.jpeg")
 square_logo = Image.open("images/teen_beauty.png")
