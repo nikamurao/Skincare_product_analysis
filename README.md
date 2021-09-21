@@ -112,7 +112,10 @@ SHAP was used to illustrate how the final model (XGBoost) was making the predict
 
 *Full report can be found [here](https://github.com/nikamurao/Skincare_product_analysis/blob/main/Project/documentation/Skincare%20report.pdf).*
 
- **### Deployment**
+
+
+
+ #### Deployment
  
 The model was retained on the entire dataset and is currently being deployed through Streamlit (link to be shared soon!). This will allow you to: 
 1) Predict the affordability of a product and analyse what factors led the model to make this prediction 
